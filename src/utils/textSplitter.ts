@@ -49,7 +49,7 @@ export class TextSplitter {
   private splitChars(element: Element) {
     const text = element.textContent || "";
     const chars = text.split("");
-    
+
     element.innerHTML = chars
       .map((char) => {
         if (char === " ") {
@@ -72,7 +72,7 @@ export class TextSplitter {
     element.innerHTML = words
       .map((word) => {
         if (word.trim().length === 0) {
-          return word; // Preserve whitespace
+          return `<span class="split-space"> </span>`; // Wrap spaces in spans so they survive DOM moves
         }
         return `<span class="split-word">${word}</span>`;
       })
@@ -96,7 +96,7 @@ export class TextSplitter {
   private splitLines(element: Element, linesClass: string) {
     // Use requestAnimationFrame to ensure layout is complete
     requestAnimationFrame(() => {
-      const items = element.querySelectorAll(".split-word, .split-char");
+      const items = element.querySelectorAll(".split-word, .split-char, .split-space");
       if (items.length === 0) return;
 
       let currentLine: Element[] = [];

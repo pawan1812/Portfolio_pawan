@@ -68,6 +68,11 @@ const Contact = () => {
                 {config.contact.email}
               </a>
             </p>
+            <p>
+              <a href={`mailto:${config.contact.email2}`} data-cursor="disable">
+                {config.contact.email2}
+              </a>
+            </p>
             <h4>Location</h4>
             <p>
               <span>{config.social.location}</span>
@@ -82,7 +87,16 @@ const Contact = () => {
               data-cursor="disable"
               className="contact-social"
             >
-              Github <MdArrowOutward />
+              Github (Pa18wan) <MdArrowOutward />
+            </a>
+            <a
+              href={config.contact.github2}
+              target="_blank"
+              rel="noopener noreferrer"
+              data-cursor="disable"
+              className="contact-social"
+            >
+              Github (pawan1812) <MdArrowOutward />
             </a>
             <a
               href={config.contact.linkedin}
@@ -92,15 +106,6 @@ const Contact = () => {
               className="contact-social"
             >
               Linkedin <MdArrowOutward />
-            </a>
-            <a
-              href={config.contact.twitter}
-              target="_blank"
-              rel="noopener noreferrer"
-              data-cursor="disable"
-              className="contact-social"
-            >
-              Twitter <MdArrowOutward />
             </a>
             <a
               href={config.contact.instagram}

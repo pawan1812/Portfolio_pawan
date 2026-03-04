@@ -12,12 +12,12 @@ const Navbar = () => {
   useEffect(() => {
     // Initialize Lenis smooth scroll
     lenis = new Lenis({
-      duration: 1.7,
+      duration: 1.2,
       easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
       orientation: "vertical",
       gestureOrientation: "vertical",
       smoothWheel: true,
-      wheelMultiplier: 1.7,
+      wheelMultiplier: 1.3,
       touchMultiplier: 2,
       infinite: false,
     });
@@ -67,14 +67,14 @@ const Navbar = () => {
     <>
       <div className="header">
         <a href="/#" className="navbar-title" data-cursor="disable">
-          Logo
+          PS
         </a>
         <a
-          href="mailto:example@mail.com"
+          href="mailto:pawanselotkar18@gmail.com"
           className="navbar-connect"
           data-cursor="disable"
         >
-          example@mail.com
+          pawanselotkar18@gmail.com
         </a>
         <ul>
           <li>

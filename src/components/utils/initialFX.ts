@@ -22,15 +22,15 @@ export function initialFX() {
   });
   gsap.fromTo(
     landingText.chars,
-    { opacity: 0, y: 80, filter: "blur(5px)" },
+    { opacity: 0, y: 50, filter: "blur(3px)" },
     {
       opacity: 1,
-      duration: 1.2,
+      duration: 0.8,
       filter: "blur(0px)",
-      ease: "power3.inOut",
+      ease: "power3.out",
       y: 0,
-      stagger: 0.025,
-      delay: 0.3,
+      stagger: 0.02,
+      delay: 0.2,
     }
   );
 
@@ -39,15 +39,15 @@ export function initialFX() {
   var landingText2 = new TextSplitter(".landing-h2-info", TextProps);
   gsap.fromTo(
     landingText2.chars,
-    { opacity: 0, y: 80, filter: "blur(5px)" },
+    { opacity: 0, y: 50, filter: "blur(3px)" },
     {
       opacity: 1,
-      duration: 1.2,
+      duration: 0.8,
       filter: "blur(0px)",
-      ease: "power3.inOut",
+      ease: "power3.out",
       y: 0,
-      stagger: 0.025,
-      delay: 0.3,
+      stagger: 0.02,
+      delay: 0.2,
     }
   );
 

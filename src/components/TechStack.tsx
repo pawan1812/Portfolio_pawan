@@ -18,7 +18,7 @@ const imageUrls = [
   "/images/node2.webp",
   "/images/express.webp",
   "/images/mongo.webp",
-  "/images/mysql.webp",
+  "/images/firebase.png",
   "/images/typescript.webp",
   "/images/javascript.webp",
 ];

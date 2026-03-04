@@ -32,7 +32,7 @@ export default function setSplitText() {
 
     para.anim = gsap.fromTo(
       para.split.words,
-      { autoAlpha: 0, y: 80 },
+      { autoAlpha: 0, y: 40 },
       {
         autoAlpha: 1,
         scrollTrigger: {
@@ -40,10 +40,10 @@ export default function setSplitText() {
           toggleActions: ToggleAction,
           start: TriggerStart,
         },
-        duration: 1,
-        ease: "power3.out",
+        duration: 0.7,
+        ease: "power2.out",
         y: 0,
-        stagger: 0.02,
+        stagger: 0.015,
       }
     );
   });
@@ -58,7 +58,7 @@ export default function setSplitText() {
     });
     title.anim = gsap.fromTo(
       title.split.chars,
-      { autoAlpha: 0, y: 80, rotate: 10 },
+      { autoAlpha: 0, y: 40, rotate: 5 },
       {
         autoAlpha: 1,
         scrollTrigger: {
@@ -66,11 +66,11 @@ export default function setSplitText() {
           toggleActions: ToggleAction,
           start: TriggerStart,
         },
-        duration: 0.8,
-        ease: "power2.inOut",
+        duration: 0.6,
+        ease: "power2.out",
         y: 0,
         rotate: 0,
-        stagger: 0.03,
+        stagger: 0.02,
       }
     );
   });

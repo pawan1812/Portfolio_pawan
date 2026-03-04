@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { MdArrowOutward } from "react-icons/md";
 
 interface Props {
@@ -9,25 +8,11 @@ interface Props {
 }
 
 const WorkImage = (props: Props) => {
-  const [isVideo, setIsVideo] = useState(false);
-  const [video, setVideo] = useState("");
-  const handleMouseEnter = async () => {
-    if (props.video) {
-      setIsVideo(true);
-      const response = await fetch(`src/assets/${props.video}`);
-      const blob = await response.blob();
-      const blobUrl = URL.createObjectURL(blob);
-      setVideo(blobUrl);
-    }
-  };
-
   return (
     <div className="work-image">
       <a
         className="work-image-in"
         href={props.link}
-        onMouseEnter={handleMouseEnter}
-        onMouseLeave={() => setIsVideo(false)}
         target="_blank"
         data-cursor={"disable"}
       >
@@ -36,8 +21,12 @@ const WorkImage = (props: Props) => {
             <MdArrowOutward />
           </div>
         )}
-        <img src={props.image} alt={props.alt} />
-        {isVideo && <video src={video} autoPlay muted playsInline loop></video>}
+        <img
+          src={props.image}
+          alt={props.alt}
+          loading="lazy"
+          decoding="async"
+        />
       </a>
     </div>
   );

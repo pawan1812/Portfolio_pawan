@@ -4,6 +4,7 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useEffect } from "react";
 import { config } from "../config";
+import { MdArrowOutward } from "react-icons/md";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -68,6 +69,30 @@ const Work = () => {
                 </div>
                 <h4>Tools and features</h4>
                 <p>{project.technologies}</p>
+                <div className="work-links">
+                  {project.github && (
+                    <a
+                      href={project.github}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      data-cursor="disable"
+                      className="work-link"
+                    >
+                      GitHub <MdArrowOutward />
+                    </a>
+                  )}
+                  {project.live && (
+                    <a
+                      href={project.live}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      data-cursor="disable"
+                      className="work-link"
+                    >
+                      Live <MdArrowOutward />
+                    </a>
+                  )}
+                </div>
               </div>
               <WorkImage image={project.image} alt={project.title} />
             </div>

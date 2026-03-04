@@ -1,25 +1,48 @@
 .section-container {
   width: 1300px;
 }
+
 .title,
 .para {
-  font-kerning: none;
-  -webkit-text-rendering: optimizeSpeed;
-  text-rendering: optimizeSpeed;
+  font-kerning: auto;
+  -webkit-text-rendering: optimizeLegibility;
+  text-rendering: optimizeLegibility;
   -webkit-transform: translateZ(0);
   transform: translateZ(0);
+  word-spacing: normal;
 }
+
+/* Ensure text splitter spaces are visible */
+.split-space {
+  display: inline;
+  white-space: pre;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+.split-word {
+  display: inline;
+  white-space: normal;
+}
+
+.split-line {
+  display: block;
+  overflow: hidden;
+}
+
 @media only screen and (max-width: 1600px) {
   .section-container {
     width: 1200px;
     max-width: calc(100% - 160px);
   }
 }
+
 @media only screen and (max-width: 1400px) {
   .section-container {
     width: 900px;
   }
 }
+
 @media only screen and (max-width: 900px) {
   .section-container {
     width: 500px;
