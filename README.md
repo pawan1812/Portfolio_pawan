@@ -4,7 +4,7 @@ A modern, animated portfolio website showcasing my work as an **AI-First Full St
 
 ## 🌐 Live Demo
 
-> _Coming soon on Vercel_
+(https://portfolio-pawan-eta.vercel.app/)
 
 ## ✨ Features
 
